@@ -7,27 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40AF62D02C691642005C4393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF62CF2C691642005C4393 /* AppDelegate.swift */; };
-		40AF62D22C691642005C4393 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF62D12C691642005C4393 /* SceneDelegate.swift */; };
-		40AF62D42C691642005C4393 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF62D32C691642005C4393 /* ViewController.swift */; };
-		40AF62D72C691642005C4393 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 40AF62D62C691642005C4393 /* Base */; };
-		40AF62D92C691643005C4393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40AF62D82C691643005C4393 /* Assets.xcassets */; };
-		40AF62DC2C691643005C4393 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 40AF62DB2C691643005C4393 /* Base */; };
+		40AF62F12C69177B005C4393 /* Human_Apps_Test_UI.h in Headers */ = {isa = PBXBuildFile; fileRef = 40AF62F02C69177B005C4393 /* Human_Apps_Test_UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		40AF62CC2C691642005C4393 /* Human Apps Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Human Apps Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		40AF62CF2C691642005C4393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		40AF62D12C691642005C4393 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		40AF62D32C691642005C4393 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		40AF62D62C691642005C4393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		40AF62D82C691643005C4393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		40AF62DB2C691643005C4393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		40AF62DD2C691643005C4393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40AF62ED2C69177B005C4393 /* Human_Apps_Test_UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Human_Apps_Test_UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40AF62F02C69177B005C4393 /* Human_Apps_Test_UI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Human_Apps_Test_UI.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		40AF62C92C691642005C4393 /* Frameworks */ = {
+		40AF62EA2C69177B005C4393 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +26,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		40AF62C32C691642005C4393 = {
+		40AF62E32C69177B005C4393 = {
 			isa = PBXGroup;
 			children = (
-				40AF62CE2C691642005C4393 /* Human Apps Test */,
-				40AF62CD2C691642005C4393 /* Products */,
+				40AF62EF2C69177B005C4393 /* Human Apps Test UI */,
+				40AF62EE2C69177B005C4393 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		40AF62CD2C691642005C4393 /* Products */ = {
+		40AF62EE2C69177B005C4393 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				40AF62CC2C691642005C4393 /* Human Apps Test.app */,
+				40AF62ED2C69177B005C4393 /* Human_Apps_Test_UI.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		40AF62CE2C691642005C4393 /* Human Apps Test */ = {
+		40AF62EF2C69177B005C4393 /* Human Apps Test UI */ = {
 			isa = PBXGroup;
 			children = (
-				40AF62CF2C691642005C4393 /* AppDelegate.swift */,
-				40AF62D12C691642005C4393 /* SceneDelegate.swift */,
-				40AF62D32C691642005C4393 /* ViewController.swift */,
-				40AF62D52C691642005C4393 /* Main.storyboard */,
-				40AF62D82C691643005C4393 /* Assets.xcassets */,
-				40AF62DA2C691643005C4393 /* LaunchScreen.storyboard */,
-				40AF62DD2C691643005C4393 /* Info.plist */,
+				40AF62F02C69177B005C4393 /* Human_Apps_Test_UI.h */,
 			);
-			path = "Human Apps Test";
+			path = "Human Apps Test UI";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		40AF62E82C69177B005C4393 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40AF62F12C69177B005C4393 /* Human_Apps_Test_UI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		40AF62CB2C691642005C4393 /* Human Apps Test */ = {
+		40AF62EC2C69177B005C4393 /* Human Apps Test UI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 40AF62E02C691643005C4393 /* Build configuration list for PBXNativeTarget "Human Apps Test" */;
+			buildConfigurationList = 40AF62F42C69177B005C4393 /* Build configuration list for PBXNativeTarget "Human Apps Test UI" */;
 			buildPhases = (
-				40AF62C82C691642005C4393 /* Sources */,
-				40AF62C92C691642005C4393 /* Frameworks */,
-				40AF62CA2C691642005C4393 /* Resources */,
+				40AF62E82C69177B005C4393 /* Headers */,
+				40AF62E92C69177B005C4393 /* Sources */,
+				40AF62EA2C69177B005C4393 /* Frameworks */,
+				40AF62EB2C69177B005C4393 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Human Apps Test";
-			productName = "Human Apps Test";
-			productReference = 40AF62CC2C691642005C4393 /* Human Apps Test.app */;
-			productType = "com.apple.product-type.application";
+			name = "Human Apps Test UI";
+			productName = "Human Apps Test UI";
+			productReference = 40AF62ED2C69177B005C4393 /* Human_Apps_Test_UI.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		40AF62C42C691642005C4393 /* Project object */ = {
+		40AF62E42C69177B005C4393 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					40AF62CB2C691642005C4393 = {
+					40AF62EC2C69177B005C4393 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = 40AF62C72C691642005C4393 /* Build configuration list for PBXProject "Human Apps Test" */;
+			buildConfigurationList = 40AF62E72C69177B005C4393 /* Build configuration list for PBXProject "Human Apps Test UI" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,63 +104,38 @@
 				en,
 				Base,
 			);
-			mainGroup = 40AF62C32C691642005C4393;
-			productRefGroup = 40AF62CD2C691642005C4393 /* Products */;
+			mainGroup = 40AF62E32C69177B005C4393;
+			productRefGroup = 40AF62EE2C69177B005C4393 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				40AF62CB2C691642005C4393 /* Human Apps Test */,
+				40AF62EC2C69177B005C4393 /* Human Apps Test UI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		40AF62CA2C691642005C4393 /* Resources */ = {
+		40AF62EB2C69177B005C4393 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40AF62D92C691643005C4393 /* Assets.xcassets in Resources */,
-				40AF62DC2C691643005C4393 /* Base in Resources */,
-				40AF62D72C691642005C4393 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		40AF62C82C691642005C4393 /* Sources */ = {
+		40AF62E92C69177B005C4393 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40AF62D42C691642005C4393 /* ViewController.swift in Sources */,
-				40AF62D02C691642005C4393 /* AppDelegate.swift in Sources */,
-				40AF62D22C691642005C4393 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		40AF62D52C691642005C4393 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				40AF62D62C691642005C4393 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		40AF62DA2C691643005C4393 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				40AF62DB2C691643005C4393 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		40AF62DE2C691643005C4393 /* Debug */ = {
+		40AF62F22C69177B005C4393 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -200,6 +169,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -226,10 +196,12 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		40AF62DF2C691643005C4393 /* Release */ = {
+		40AF62F32C69177B005C4393 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -263,6 +235,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -282,68 +255,80 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		40AF62E12C691643005C4393 /* Debug */ = {
+		40AF62F52C69177B005C4393 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y97YKW5885;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Human Apps Test/Info.plist";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "luqrri.com.Human-Apps-Test";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = "luqrri.com.Human-Apps-Test-UI";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		40AF62E22C691643005C4393 /* Release */ = {
+		40AF62F62C69177B005C4393 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y97YKW5885;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Human Apps Test/Info.plist";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "luqrri.com.Human-Apps-Test";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = "luqrri.com.Human-Apps-Test-UI";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -352,25 +337,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		40AF62C72C691642005C4393 /* Build configuration list for PBXProject "Human Apps Test" */ = {
+		40AF62E72C69177B005C4393 /* Build configuration list for PBXProject "Human Apps Test UI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				40AF62DE2C691643005C4393 /* Debug */,
-				40AF62DF2C691643005C4393 /* Release */,
+				40AF62F22C69177B005C4393 /* Debug */,
+				40AF62F32C69177B005C4393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		40AF62E02C691643005C4393 /* Build configuration list for PBXNativeTarget "Human Apps Test" */ = {
+		40AF62F42C69177B005C4393 /* Build configuration list for PBXNativeTarget "Human Apps Test UI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				40AF62E12C691643005C4393 /* Debug */,
-				40AF62E22C691643005C4393 /* Release */,
+				40AF62F52C69177B005C4393 /* Debug */,
+				40AF62F62C69177B005C4393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 40AF62C42C691642005C4393 /* Project object */;
+	rootObject = 40AF62E42C69177B005C4393 /* Project object */;
 }
