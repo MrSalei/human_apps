@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Human Apps Test Core/Human Apps Test Core.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Human Apps Test UI/Human Apps Test UI.xcodeproj">
    </FileRef>
    <FileRef

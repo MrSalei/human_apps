@@ -17,6 +17,8 @@
 		40AF63032C691BC3005C4393 /* TabBarDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF63022C691BC3005C4393 /* TabBarDependencyContainer.swift */; };
 		40AF630A2C691D58005C4393 /* MainDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF63092C691D58005C4393 /* MainDependencyContainer.swift */; };
 		40AF633F2C692541005C4393 /* SettingsDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF633E2C692541005C4393 /* SettingsDependencyContainer.swift */; };
+		40AF63612C692769005C4393 /* Human_Apps_Test_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AF63602C692769005C4393 /* Human_Apps_Test_Core.framework */; };
+		40AF63622C692769005C4393 /* Human_Apps_Test_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40AF63602C692769005C4393 /* Human_Apps_Test_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				40AF62FF2C691BA2005C4393 /* Human_Apps_Test_UI.framework in Embed Frameworks */,
+				40AF63622C692769005C4393 /* Human_Apps_Test_Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +48,7 @@
 		40AF63022C691BC3005C4393 /* TabBarDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDependencyContainer.swift; sourceTree = "<group>"; };
 		40AF63092C691D58005C4393 /* MainDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDependencyContainer.swift; sourceTree = "<group>"; };
 		40AF633E2C692541005C4393 /* SettingsDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDependencyContainer.swift; sourceTree = "<group>"; };
+		40AF63602C692769005C4393 /* Human_Apps_Test_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Human_Apps_Test_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40AF62FE2C691BA2005C4393 /* Human_Apps_Test_UI.framework in Frameworks */,
+				40AF63612C692769005C4393 /* Human_Apps_Test_Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +98,7 @@
 		40AF62FC2C691BA2005C4393 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				40AF63602C692769005C4393 /* Human_Apps_Test_Core.framework */,
 				40AF62FD2C691BA2005C4393 /* Human_Apps_Test_UI.framework */,
 			);
 			name = Frameworks;
@@ -339,9 +345,12 @@
 				DEVELOPMENT_TEAM = Y97YKW5885;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Human Apps Test/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to your photo library to select images.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -371,9 +380,12 @@
 				DEVELOPMENT_TEAM = Y97YKW5885;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Human Apps Test/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to your photo library to select images.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -10,6 +10,7 @@ import Combine
 
 public final class MainRouterViewModel {
     
+    private(set) var systemAlertSender = PassthroughSubject<Alert, Never>()
     private(set) var photoPickerSender = PassthroughSubject<Void, Never>()
     
     public init() {}

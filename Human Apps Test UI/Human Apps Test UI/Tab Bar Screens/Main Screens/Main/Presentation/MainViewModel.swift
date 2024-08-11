@@ -6,14 +6,18 @@
 //
 
 import Foundation
+import Human_Apps_Test_Core
 
 public final class MainViewModel {
     
-    private(set) var navigationManager: PhotoPickerPresenter
+    private(set) var navigationManager: PhotoPickerPresenter & SystemAlertPresenter
+    private(set) var photoPickerManager: PhotoPickerManagerProtocol
     
     public init(
-        navigationManager: PhotoPickerPresenter
+        navigationManager: PhotoPickerPresenter & SystemAlertPresenter,
+        photoPickerManager: PhotoPickerManagerProtocol
     ) {
         self.navigationManager = navigationManager
+        self.photoPickerManager = photoPickerManager
     }
 }

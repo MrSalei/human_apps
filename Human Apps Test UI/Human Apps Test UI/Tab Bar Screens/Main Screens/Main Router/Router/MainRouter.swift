@@ -60,6 +60,19 @@ extension MainRouter {
             .store(
                 in: &cancellablesStorage
             )
+        
+        viewModel.systemAlertSender
+            .receive(
+                on: DispatchQueue.main
+            )
+            .sink { [weak self] alert in
+                self?.presentSystemAlert(
+                    with: alert
+                )
+            }
+            .store(
+                in: &cancellablesStorage
+            )
     }
 }
 
@@ -89,5 +102,46 @@ extension MainRouter {
             animated: true,
             completion: nil
         )
+    }
+    
+    private func presentSystemAlert(
+        with alert: Alert
+    ) {
+        let alertController = UIAlertController(
+            title: alert.title,
+            message: alert.message,
+            preferredStyle: .alert
+        )
+        
+        let okAction = UIAlertAction(
+            title: "OK",
+            style: .default
+        ) { [weak self] _ in
+            print("OK button tapped")
+            self?.presentSettings()
+        }
+        
+        alertController.addAction(okAction)
+
+        navigationController.present(
+            alertController,
+            animated: true,
+            completion: nil
+        )
+    }
+    
+    private func presentSettings() {
+        guard let settingsUrl = URL(
+            string: UIApplication.openSettingsURLString
+        ) else {
+            return
+        }
+        
+        if UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(
+                settingsUrl,
+                completionHandler: nil
+            )
+        }
     }
 }

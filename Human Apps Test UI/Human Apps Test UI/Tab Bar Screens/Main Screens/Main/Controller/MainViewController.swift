@@ -55,8 +55,14 @@ extension MainViewController: PHPickerViewControllerDelegate {
             return
         }
         
-        viewModel.validate(
-            result: result
-        )
+        result.itemProvider.loadObject(
+            ofClass: UIImage.self
+        ) { [weak self] (object, error) in
+            if let image = object as? UIImage, let compressedImageData = image.jpegData(
+                compressionQuality: 0.8
+            ) {
+                // TODO: - DISPLAY IMAGE
+            }
+        }
     }
 }
