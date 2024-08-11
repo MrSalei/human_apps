@@ -23,11 +23,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window?.windowScene = windowScene
         
-        // TODO: - REPLACE WITH TAB BAR
-        let vc = UIViewController()
-        vc.view.backgroundColor = .blue
-        
-        window?.rootViewController = vc
+        window?.rootViewController = TabBarDependencyContainer().createTabBarViewController()
         
         window?.makeKeyAndVisible()
     }

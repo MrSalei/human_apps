@@ -8,11 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		40AF62F12C69177B005C4393 /* Human_Apps_Test_UI.h in Headers */ = {isa = PBXBuildFile; fileRef = 40AF62F02C69177B005C4393 /* Human_Apps_Test_UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40AF62FB2C691A9E005C4393 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF62FA2C691A9E005C4393 /* TabBarViewController.swift */; };
+		40AF63072C691C9F005C4393 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF63062C691C9F005C4393 /* MainRouter.swift */; };
+		40AF630F2C691F17005C4393 /* PhotoPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF630E2C691F17005C4393 /* PhotoPickerPresenter.swift */; };
+		40AF63132C691F5D005C4393 /* MainRouterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF63122C691F5D005C4393 /* MainRouterViewModel.swift */; };
+		40AF63162C691F6C005C4393 /* MainRouterVM+PhotoPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF63152C691F6C005C4393 /* MainRouterVM+PhotoPickerPresenter.swift */; };
+		40AF631B2C692073005C4393 /* MainViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF631A2C692073005C4393 /* MainViewControllerView.swift */; };
+		40AF631D2C69207A005C4393 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF631C2C69207A005C4393 /* MainViewController.swift */; };
+		40AF631F2C692080005C4393 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF631E2C692080005C4393 /* MainViewModel.swift */; };
+		40AF63222C692149005C4393 /* MainVM+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF63212C692149005C4393 /* MainVM+Validation.swift */; };
+		40AF63242C6922C3005C4393 /* SystemAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF63232C6922C3005C4393 /* SystemAlertPresenter.swift */; };
+		40AF63272C6922FC005C4393 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF63262C6922FC005C4393 /* Typealiases.swift */; };
+		40AF632E2C692351005C4393 /* SettingsRouterVM+SystemAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF632D2C692351005C4393 /* SettingsRouterVM+SystemAlertPresenter.swift */; };
+		40AF63302C69235A005C4393 /* SettingsRouterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF632F2C69235A005C4393 /* SettingsRouterViewModel.swift */; };
+		40AF63322C692360005C4393 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF63312C692360005C4393 /* SettingsRouter.swift */; };
+		40AF63382C6924B5005C4393 /* SettingsMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF63372C6924B5005C4393 /* SettingsMainViewModel.swift */; };
+		40AF633B2C6924C3005C4393 /* SettingsMainVM+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF633A2C6924C3005C4393 /* SettingsMainVM+Navigation.swift */; };
+		40AF633D2C692522005C4393 /* MainVM+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF633C2C692522005C4393 /* MainVM+Navigation.swift */; };
+		40AF63412C692571005C4393 /* SettingsMainViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF63402C692571005C4393 /* SettingsMainViewControllerView.swift */; };
+		40AF63432C692583005C4393 /* SettingsMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF63422C692583005C4393 /* SettingsMainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		40AF62ED2C69177B005C4393 /* Human_Apps_Test_UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Human_Apps_Test_UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40AF62F02C69177B005C4393 /* Human_Apps_Test_UI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Human_Apps_Test_UI.h; sourceTree = "<group>"; };
+		40AF62FA2C691A9E005C4393 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		40AF63062C691C9F005C4393 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		40AF630E2C691F17005C4393 /* PhotoPickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerPresenter.swift; sourceTree = "<group>"; };
+		40AF63122C691F5D005C4393 /* MainRouterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouterViewModel.swift; sourceTree = "<group>"; };
+		40AF63152C691F6C005C4393 /* MainRouterVM+PhotoPickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainRouterVM+PhotoPickerPresenter.swift"; sourceTree = "<group>"; };
+		40AF631A2C692073005C4393 /* MainViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerView.swift; sourceTree = "<group>"; };
+		40AF631C2C69207A005C4393 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		40AF631E2C692080005C4393 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		40AF63212C692149005C4393 /* MainVM+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVM+Validation.swift"; sourceTree = "<group>"; };
+		40AF63232C6922C3005C4393 /* SystemAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemAlertPresenter.swift; sourceTree = "<group>"; };
+		40AF63262C6922FC005C4393 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		40AF632D2C692351005C4393 /* SettingsRouterVM+SystemAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsRouterVM+SystemAlertPresenter.swift"; sourceTree = "<group>"; };
+		40AF632F2C69235A005C4393 /* SettingsRouterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouterViewModel.swift; sourceTree = "<group>"; };
+		40AF63312C692360005C4393 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		40AF63372C6924B5005C4393 /* SettingsMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMainViewModel.swift; sourceTree = "<group>"; };
+		40AF633A2C6924C3005C4393 /* SettingsMainVM+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsMainVM+Navigation.swift"; sourceTree = "<group>"; };
+		40AF633C2C692522005C4393 /* MainVM+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVM+Navigation.swift"; sourceTree = "<group>"; };
+		40AF63402C692571005C4393 /* SettingsMainViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMainViewControllerView.swift; sourceTree = "<group>"; };
+		40AF63422C692583005C4393 /* SettingsMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,9 +83,236 @@
 		40AF62EF2C69177B005C4393 /* Human Apps Test UI */ = {
 			isa = PBXGroup;
 			children = (
+				40AF630C2C691EF9005C4393 /* Helpers */,
+				40AF62F72C6919ED005C4393 /* Tab Bar Screens */,
 				40AF62F02C69177B005C4393 /* Human_Apps_Test_UI.h */,
 			);
 			path = "Human Apps Test UI";
+			sourceTree = "<group>";
+		};
+		40AF62F72C6919ED005C4393 /* Tab Bar Screens */ = {
+			isa = PBXGroup;
+			children = (
+				40AF63282C692329005C4393 /* Settings Screens */,
+				40AF63042C691C59005C4393 /* Main Screens */,
+				40AF62F82C691A28005C4393 /* Tab Bar */,
+			);
+			path = "Tab Bar Screens";
+			sourceTree = "<group>";
+		};
+		40AF62F82C691A28005C4393 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				40AF62F92C691A7C005C4393 /* Controller */,
+			);
+			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		40AF62F92C691A7C005C4393 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				40AF62FA2C691A9E005C4393 /* TabBarViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		40AF63042C691C59005C4393 /* Main Screens */ = {
+			isa = PBXGroup;
+			children = (
+				40AF630B2C691E07005C4393 /* Main */,
+				40AF63052C691C94005C4393 /* Main Router */,
+			);
+			path = "Main Screens";
+			sourceTree = "<group>";
+		};
+		40AF63052C691C94005C4393 /* Main Router */ = {
+			isa = PBXGroup;
+			children = (
+				40AF63112C691F44005C4393 /* View Model */,
+				40AF63102C691F3D005C4393 /* Router */,
+			);
+			path = "Main Router";
+			sourceTree = "<group>";
+		};
+		40AF630B2C691E07005C4393 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				40AF63192C692069005C4393 /* Presentation */,
+				40AF63182C692061005C4393 /* Controller */,
+				40AF63172C69205C005C4393 /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		40AF630C2C691EF9005C4393 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				40AF63252C6922F4005C4393 /* Typealiases */,
+				40AF630D2C691EFE005C4393 /* Protocols */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		40AF630D2C691EFE005C4393 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				40AF630E2C691F17005C4393 /* PhotoPickerPresenter.swift */,
+				40AF63232C6922C3005C4393 /* SystemAlertPresenter.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		40AF63102C691F3D005C4393 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				40AF63062C691C9F005C4393 /* MainRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		40AF63112C691F44005C4393 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				40AF63142C691F5F005C4393 /* Helpers */,
+				40AF63122C691F5D005C4393 /* MainRouterViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		40AF63142C691F5F005C4393 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				40AF63152C691F6C005C4393 /* MainRouterVM+PhotoPickerPresenter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		40AF63172C69205C005C4393 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40AF631A2C692073005C4393 /* MainViewControllerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		40AF63182C692061005C4393 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				40AF631C2C69207A005C4393 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		40AF63192C692069005C4393 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				40AF63202C692140005C4393 /* Helpers */,
+				40AF631E2C692080005C4393 /* MainViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		40AF63202C692140005C4393 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				40AF63212C692149005C4393 /* MainVM+Validation.swift */,
+				40AF633C2C692522005C4393 /* MainVM+Navigation.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		40AF63252C6922F4005C4393 /* Typealiases */ = {
+			isa = PBXGroup;
+			children = (
+				40AF63262C6922FC005C4393 /* Typealiases.swift */,
+			);
+			path = Typealiases;
+			sourceTree = "<group>";
+		};
+		40AF63282C692329005C4393 /* Settings Screens */ = {
+			isa = PBXGroup;
+			children = (
+				40AF63332C692495005C4393 /* Settings Main */,
+				40AF63292C692330005C4393 /* Settings Router */,
+			);
+			path = "Settings Screens";
+			sourceTree = "<group>";
+		};
+		40AF63292C692330005C4393 /* Settings Router */ = {
+			isa = PBXGroup;
+			children = (
+				40AF632B2C69233C005C4393 /* View Model */,
+				40AF632A2C692337005C4393 /* Router */,
+			);
+			path = "Settings Router";
+			sourceTree = "<group>";
+		};
+		40AF632A2C692337005C4393 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				40AF63312C692360005C4393 /* SettingsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		40AF632B2C69233C005C4393 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				40AF632C2C692340005C4393 /* Helpers */,
+				40AF632F2C69235A005C4393 /* SettingsRouterViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		40AF632C2C692340005C4393 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				40AF632D2C692351005C4393 /* SettingsRouterVM+SystemAlertPresenter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		40AF63332C692495005C4393 /* Settings Main */ = {
+			isa = PBXGroup;
+			children = (
+				40AF63362C6924A4005C4393 /* Presentation */,
+				40AF63352C6924A0005C4393 /* Controller */,
+				40AF63342C69249B005C4393 /* Views */,
+			);
+			path = "Settings Main";
+			sourceTree = "<group>";
+		};
+		40AF63342C69249B005C4393 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40AF63402C692571005C4393 /* SettingsMainViewControllerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		40AF63352C6924A0005C4393 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				40AF63422C692583005C4393 /* SettingsMainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		40AF63362C6924A4005C4393 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				40AF63392C6924BA005C4393 /* Helpers */,
+				40AF63372C6924B5005C4393 /* SettingsMainViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		40AF63392C6924BA005C4393 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				40AF633A2C6924C3005C4393 /* SettingsMainVM+Navigation.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +358,7 @@
 				TargetAttributes = {
 					40AF62EC2C69177B005C4393 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -129,6 +395,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40AF631D2C69207A005C4393 /* MainViewController.swift in Sources */,
+				40AF62FB2C691A9E005C4393 /* TabBarViewController.swift in Sources */,
+				40AF63432C692583005C4393 /* SettingsMainViewController.swift in Sources */,
+				40AF63222C692149005C4393 /* MainVM+Validation.swift in Sources */,
+				40AF63322C692360005C4393 /* SettingsRouter.swift in Sources */,
+				40AF630F2C691F17005C4393 /* PhotoPickerPresenter.swift in Sources */,
+				40AF63412C692571005C4393 /* SettingsMainViewControllerView.swift in Sources */,
+				40AF63302C69235A005C4393 /* SettingsRouterViewModel.swift in Sources */,
+				40AF63382C6924B5005C4393 /* SettingsMainViewModel.swift in Sources */,
+				40AF63242C6922C3005C4393 /* SystemAlertPresenter.swift in Sources */,
+				40AF631B2C692073005C4393 /* MainViewControllerView.swift in Sources */,
+				40AF63132C691F5D005C4393 /* MainRouterViewModel.swift in Sources */,
+				40AF63272C6922FC005C4393 /* Typealiases.swift in Sources */,
+				40AF63162C691F6C005C4393 /* MainRouterVM+PhotoPickerPresenter.swift in Sources */,
+				40AF63072C691C9F005C4393 /* MainRouter.swift in Sources */,
+				40AF631F2C692080005C4393 /* MainViewModel.swift in Sources */,
+				40AF633D2C692522005C4393 /* MainVM+Navigation.swift in Sources */,
+				40AF633B2C6924C3005C4393 /* SettingsMainVM+Navigation.swift in Sources */,
+				40AF632E2C692351005C4393 /* SettingsRouterVM+SystemAlertPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +549,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -292,6 +578,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -301,6 +588,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
