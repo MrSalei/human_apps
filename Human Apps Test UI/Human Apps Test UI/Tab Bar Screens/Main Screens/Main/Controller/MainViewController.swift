@@ -85,10 +85,10 @@ extension MainViewController {
         _ sender: UISegmentedControl
     ) {
         switch sender.selectedSegmentIndex {
-        case 0: ()
-            // TODO: -
-        case 1: ()
-            // TODO: -
+        case 0:
+            contentView.viewWithImage?.applyBlackFilter()
+        case 1:
+            contentView.viewWithImage?.applyWhiteFilter()
         default:
             break
         }
@@ -155,11 +155,28 @@ extension MainViewController {
             cgImage: croppedCgImage
         )
         
-        // TODO: - DO SMTH WITH RESULT
+        UIImageWriteToSavedPhotosAlbum(
+            result,
+            self,
+            #selector(imageSavingCompleted(_:didFinishSavingWithError:contextInfo:)),
+            nil
+        )
     }
     
     @objc private func displayPhotoPickerButtonWasPressed() {
         viewModel.requestPhotoLibraryStatus()
+    }
+    
+    @objc func imageSavingCompleted(
+        _ image: UIImage,
+        didFinishSavingWithError error: Error?,
+        contextInfo: UnsafeRawPointer
+    ) {
+        if let error = error {
+            print("Error saving image: \(error.localizedDescription)")
+        } else {
+            print("Image saved successfully!")
+        }
     }
 }
 
@@ -188,6 +205,10 @@ extension MainViewController: PHPickerViewControllerDelegate {
                     self?.contentView.updateSelf(
                         imageData: compressedImageData
                     )
+                    
+                    if let leftBarButtonItem = self?.contentView.leftBarButtonItem {
+                        self?.segmentedControlValueChanged(leftBarButtonItem)
+                    }
                 }
             }
         }

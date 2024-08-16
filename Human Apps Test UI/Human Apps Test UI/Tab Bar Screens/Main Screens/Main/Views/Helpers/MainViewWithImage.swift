@@ -16,6 +16,8 @@ private struct Constants {
 
 public final class MainViewWithImage: UIView {
     
+    private var defaultImage: UIImage?
+    
     public let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -34,7 +36,7 @@ public final class MainViewWithImage: UIView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.isDoubleSided = false
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleToFill
         imageView.clipsToBounds = true
         imageView.isUserInteractionEnabled = true
         
@@ -72,9 +74,11 @@ public final class MainViewWithImage: UIView {
             frame: .zero
         )
         
-        selectedImageView.image = UIImage(
+        defaultImage = UIImage(
             data: imageData
         )
+        
+        selectedImageView.image = defaultImage
         
         scrollView.delegate = self
         
@@ -98,6 +102,106 @@ public final class MainViewWithImage: UIView {
         
         layoutElements()
         setupMask()
+    }
+}
+
+// MARK: - PUBLIC HELPERS
+extension MainViewWithImage {
+    
+    public func applyBlackFilter() {
+        guard let currentImage = defaultImage else {
+            return
+        }
+        
+        let currentCIImage = CIImage(
+            image: currentImage
+        )
+
+        let filter = CIFilter(
+            name: "CIColorMonochrome"
+        )
+        
+        filter?.setValue(
+            currentCIImage,
+            forKey: kCIInputImageKey
+        )
+        
+        filter?.setValue(
+            CIColor(
+                red: 0.0,
+                green: 0.0,
+                blue: 0.0
+            ),
+            forKey: "inputColor"
+        )
+        
+        filter?.setValue(
+            1.0,
+            forKey: "inputIntensity"
+        )
+
+        guard let outputImage = filter?.outputImage else {
+            return
+        }
+        
+        let context = CIContext()
+
+        if let cgimg = context.createCGImage(
+            outputImage,
+            from: outputImage.extent
+        ) {
+            selectedImageView.image = UIImage(
+                cgImage: cgimg
+            )
+        }
+    }
+    
+    public func applyWhiteFilter() {
+        guard let currentImage = defaultImage else {
+            return
+        }
+        
+        let currentCIImage = CIImage(
+            image: currentImage
+        )
+
+        let filter = CIFilter(
+            name: "CIColorMonochrome"
+        )
+        
+        filter?.setValue(
+            currentCIImage,
+            forKey: kCIInputImageKey
+        )
+        
+        filter?.setValue(
+            CIColor(
+                red: 1.0,
+                green: 1.0,
+                blue: 1.0
+            ),
+            forKey: "inputColor"
+        )
+        
+        filter?.setValue(
+            1.0,
+            forKey: "inputIntensity"
+        )
+
+        guard let outputImage = filter?.outputImage else {
+            return
+        }
+        
+        let context = CIContext()
+
+        if let cgimg = context.createCGImage(
+            outputImage,
+            from: outputImage.extent
+        ) {
+            selectedImageView.image = UIImage(
+                cgImage: cgimg
+            )
+        }
     }
 }
 

@@ -111,6 +111,8 @@ extension SettingsMainViewController: UITableViewDelegate, UITableViewDataSource
             for: indexPath
         )
         cell.layer.isDoubleSided = false
+        cell.backgroundColor = .white
+        cell.textLabel?.textColor = .black
         
         guard indexPath.row >= 0 && indexPath.row < viewModel.tableViewData.count else {
             return cell

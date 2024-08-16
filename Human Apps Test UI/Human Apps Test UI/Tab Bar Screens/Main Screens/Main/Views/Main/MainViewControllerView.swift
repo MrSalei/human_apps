@@ -28,7 +28,19 @@ public final class MainViewControllerView: UIView {
         )
         control.translatesAutoresizingMaskIntoConstraints = false
         control.layer.isDoubleSided = false
-        control.selectedSegmentIndex = 0
+        control.selectedSegmentTintColor = .white
+        control.setTitleTextAttributes(
+            [
+                .foregroundColor: UIColor.black
+            ],
+            for: .normal
+        )
+        control.setTitleTextAttributes(
+            [
+                .foregroundColor: UIColor.black
+            ],
+            for: .selected
+        )
         
         return control
     }()
