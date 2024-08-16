@@ -29,6 +29,8 @@
 		40AF63652C692772005C4393 /* Human_Apps_Test_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AF63642C692772005C4393 /* Human_Apps_Test_Core.framework */; };
 		40AF63692C6929DD005C4393 /* MainVM+PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF63682C6929DD005C4393 /* MainVM+PhotoPicker.swift */; };
 		40AF636B2C692B5C005C4393 /* MainRouterVM+SystemAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF636A2C692B5C005C4393 /* MainRouterVM+SystemAlertPresenter.swift */; };
+		40F415112C6E51EA008B2CD5 /* HighlightedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F415102C6E51EA008B2CD5 /* HighlightedButton.swift */; };
+		40F415152C6E5C3D008B2CD5 /* MainViewWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F415142C6E5C3D008B2CD5 /* MainViewWithImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		40AF63642C692772005C4393 /* Human_Apps_Test_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Human_Apps_Test_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40AF63682C6929DD005C4393 /* MainVM+PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVM+PhotoPicker.swift"; sourceTree = "<group>"; };
 		40AF636A2C692B5C005C4393 /* MainRouterVM+SystemAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainRouterVM+SystemAlertPresenter.swift"; sourceTree = "<group>"; };
+		40F415102C6E51EA008B2CD5 /* HighlightedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedButton.swift; sourceTree = "<group>"; };
+		40F415142C6E5C3D008B2CD5 /* MainViewWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewWithImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 		40AF630C2C691EF9005C4393 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				40F4150F2C6E51E1008B2CD5 /* Views */,
 				40AF63252C6922F4005C4393 /* Typealiases */,
 				40AF630D2C691EFE005C4393 /* Protocols */,
 			);
@@ -197,7 +202,8 @@
 		40AF63172C69205C005C4393 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				40AF631A2C692073005C4393 /* MainViewControllerView.swift */,
+				40F415132C6E5C29008B2CD5 /* Helpers */,
+				40F415122C6E5C24008B2CD5 /* Main */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -330,6 +336,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		40F4150F2C6E51E1008B2CD5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40F415102C6E51EA008B2CD5 /* HighlightedButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		40F415122C6E5C24008B2CD5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				40AF631A2C692073005C4393 /* MainViewControllerView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		40F415132C6E5C29008B2CD5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				40F415142C6E5C3D008B2CD5 /* MainViewWithImage.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -411,9 +441,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				40AF631D2C69207A005C4393 /* MainViewController.swift in Sources */,
+				40F415112C6E51EA008B2CD5 /* HighlightedButton.swift in Sources */,
 				40AF62FB2C691A9E005C4393 /* TabBarViewController.swift in Sources */,
 				40AF63432C692583005C4393 /* SettingsMainViewController.swift in Sources */,
 				40AF63322C692360005C4393 /* SettingsRouter.swift in Sources */,
+				40F415152C6E5C3D008B2CD5 /* MainViewWithImage.swift in Sources */,
 				40AF630F2C691F17005C4393 /* PhotoPickerPresenter.swift in Sources */,
 				40AF63412C692571005C4393 /* SettingsMainViewControllerView.swift in Sources */,
 				40AF63302C69235A005C4393 /* SettingsRouterViewModel.swift in Sources */,

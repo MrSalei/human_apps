@@ -13,6 +13,8 @@ public final class MainViewController: UIViewController {
     private let viewModel: MainViewModel
     private let contentView = MainViewControllerView()
     
+    public var router: MainRouter?
+    
     public init(
         viewModel: MainViewModel
     ) {
@@ -37,6 +39,127 @@ public final class MainViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavigation()
+        setupActions()
+    }
+}
+
+// MARK: - SETUP HELPERS
+extension MainViewController {
+    
+    private func setupNavigation() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            customView: contentView.leftBarButtonItem
+        )
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            customView: contentView.rightBarButtonItem
+        )
+    }
+    
+    private func setupActions() {
+        contentView.leftBarButtonItem.addTarget(
+            self,
+            action: #selector(segmentedControlValueChanged(_:)),
+            for: .valueChanged
+        )
+        
+        contentView.rightBarButtonItem.addTarget(
+            self,
+            action: #selector(rightBarButtonItemWasPressed),
+            for: .touchUpInside
+        )
+        
+        contentView.displayPhotoPickerButton.addTarget(
+            self,
+            action: #selector(displayPhotoPickerButtonWasPressed),
+            for: .touchUpInside
+        )
+    }
+}
+
+// MARK: - @OBJC METHODS
+extension MainViewController {
+    
+    @objc func segmentedControlValueChanged(
+        _ sender: UISegmentedControl
+    ) {
+        switch sender.selectedSegmentIndex {
+        case 0: ()
+            // TODO: -
+        case 1: ()
+            // TODO: -
+        default:
+            break
+        }
+    }
+    
+    @objc private func rightBarButtonItemWasPressed() {
+        guard let viewWithImage = contentView.viewWithImage else {
+            return
+        }
+        
+        // Get the rect of the small image view in the coordinate space of the big image view
+        let smallImageViewRect: CGRect
+        
+        let scrollZoomScale = viewWithImage.scrollView.zoomScale
+        if scrollZoomScale == 1 {
+            smallImageViewRect = viewWithImage.selectedImageView.convert(
+                viewWithImage.croppedRectangleView.frame,
+                from: viewWithImage.selectedImageView
+            )
+        } else {
+            smallImageViewRect = CGRect(
+                x: viewWithImage.scrollView.contentOffset.x / scrollZoomScale,
+                y: viewWithImage.scrollView.contentOffset.y / scrollZoomScale + viewWithImage.scrollView.contentInset.top / scrollZoomScale,
+                width: viewWithImage.croppedRectangleView.frame.width / scrollZoomScale,
+                height: viewWithImage.croppedRectangleView.frame.height / scrollZoomScale
+            )
+        }
+        
+        // Render the contents of the big image view into a UIImage
+        let renderer = UIGraphicsImageRenderer(
+            size: viewWithImage.selectedImageView.bounds.size
+        )
+        
+        let mainImage = renderer.image { _ in
+            viewWithImage.selectedImageView.drawHierarchy(
+                in: viewWithImage.selectedImageView.bounds,
+                afterScreenUpdates: true
+            )
+        }
+        
+        // Crop the relevant portion of the UIImage
+        guard let scale = contentView.window?.windowScene?.screen.scale else {
+            return
+        }
+        
+        let cropRect = CGRect(
+            x: smallImageViewRect.origin.x * scale,
+            y: smallImageViewRect.origin.y * scale,
+            width: smallImageViewRect.size.width * scale,
+            height: smallImageViewRect.size.height * scale
+        )
+        
+        guard let mainCgImage = mainImage.cgImage else { 
+            return
+        }
+        
+        guard let croppedCgImage = mainCgImage.cropping(
+            to: cropRect
+        ) else {
+            return
+        }
+        
+        let result = UIImage(
+            cgImage: croppedCgImage
+        )
+        
+        // TODO: - DO SMTH WITH RESULT
+    }
+    
+    @objc private func displayPhotoPickerButtonWasPressed() {
+        viewModel.requestPhotoLibraryStatus()
     }
 }
 
@@ -61,7 +184,11 @@ extension MainViewController: PHPickerViewControllerDelegate {
             if let image = object as? UIImage, let compressedImageData = image.jpegData(
                 compressionQuality: 0.8
             ) {
-                // TODO: - DISPLAY IMAGE
+                DispatchQueue.main.async { [weak self] in
+                    self?.contentView.updateSelf(
+                        imageData: compressedImageData
+                    )
+                }
             }
         }
     }

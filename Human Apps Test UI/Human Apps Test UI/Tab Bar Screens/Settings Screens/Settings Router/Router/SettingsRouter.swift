@@ -8,6 +8,10 @@
 import UIKit
 import Combine
 
+private struct Constants {
+    static let TAB_BAR_ITEM_TITLE = "Settings"
+}
+
 public final class SettingsRouter: NSObject {
     
     private let viewModel: SettingsRouterViewModel
@@ -41,6 +45,18 @@ extension SettingsRouter {
         navigationController.navigationBar.compactAppearance = appearance
         navigationController.navigationBar.scrollEdgeAppearance = appearance
         navigationController.interactivePopGestureRecognizer?.isEnabled = false
+        
+        navigationController.tabBarItem.title = Constants.TAB_BAR_ITEM_TITLE
+        
+        let mainUnselectedImage = UIImage(
+            systemName: "circle"
+        )
+        let mainSelectedImage = UIImage(
+            systemName: "circle.fill"
+        )
+        
+        navigationController.tabBarItem.image = mainUnselectedImage
+        navigationController.tabBarItem.selectedImage = mainSelectedImage
         
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance

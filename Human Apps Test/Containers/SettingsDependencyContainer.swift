@@ -10,8 +10,6 @@ import Human_Apps_Test_UI
 
 public final class SettingsDependencyContainer {
     
-    private var router: SettingsRouter!
-    
     init() {}
     
     func createRootViewController() -> UIViewController {
@@ -23,10 +21,12 @@ public final class SettingsDependencyContainer {
             navigationManager: routerViewModel
         )
         
-        router = SettingsRouter(
+        let router = SettingsRouter(
             viewModel: routerViewModel,
             navigationController: navigationController
         )
+        
+        mainViewController.router = router
         
         navigationController.viewControllers = [
             mainViewController
@@ -41,7 +41,7 @@ extension SettingsDependencyContainer {
     
     private func createMainVC(
         navigationManager: SystemAlertPresenter
-    ) -> UIViewController {
+    ) -> SettingsMainViewController {
         let viewModel = SettingsMainViewModel(
             navigationManager: navigationManager
         )

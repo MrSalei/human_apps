@@ -12,7 +12,6 @@ import Human_Apps_Test_Core
 public final class MainDependencyContainer {
     
     private let photoPickerManager: PhotoPickerManagerProtocol
-    private var router: MainRouter!
     
     init() {
         photoPickerManager = PhotoPickerManager()
@@ -27,10 +26,12 @@ public final class MainDependencyContainer {
             navigationManager: routerViewModel
         )
         
-        router = MainRouter(
+        let router = MainRouter(
             viewModel: routerViewModel,
             navigationController: navigationController
         )
+        
+        mainViewController.router = router
         
         navigationController.viewControllers = [
             mainViewController
@@ -45,7 +46,7 @@ extension MainDependencyContainer {
     
     private func createMainVC(
         navigationManager: PhotoPickerPresenter & SystemAlertPresenter
-    ) -> UIViewController {
+    ) -> MainViewController {
         let viewModel = MainViewModel(
             navigationManager: navigationManager,
             photoPickerManager: photoPickerManager

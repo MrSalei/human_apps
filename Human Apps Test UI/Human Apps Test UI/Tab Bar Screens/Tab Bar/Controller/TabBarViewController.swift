@@ -18,6 +18,8 @@ public final class TabBarViewController: UITabBarController {
         )
         
         self.viewControllers = viewControllers
+        
+        self.tabBarItem.title = "Home"
     }
     
     required init?(
