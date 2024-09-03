@@ -10,8 +10,8 @@ import UIKit
 private struct Constants {
     static let FILTERS_HEIGHT: CGFloat = 30
     static let FILTER_ITEMS = [
-        "Black",
-        "White"
+        "Original",
+        "Black/White"
     ]
     static let SAVE_ICON_NAME = "square.and.arrow.down"
     static let SAVE_TITLE = "Save"

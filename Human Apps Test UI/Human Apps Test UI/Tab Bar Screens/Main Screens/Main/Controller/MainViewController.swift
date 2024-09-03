@@ -86,9 +86,9 @@ extension MainViewController {
     ) {
         switch sender.selectedSegmentIndex {
         case 0:
-            contentView.viewWithImage?.applyBlackFilter()
+            contentView.viewWithImage?.displayDefaultImage()
         case 1:
-            contentView.viewWithImage?.applyWhiteFilter()
+            contentView.viewWithImage?.applyBlackWhiteFilter()
         default:
             break
         }
@@ -110,8 +110,8 @@ extension MainViewController {
             )
         } else {
             smallImageViewRect = CGRect(
-                x: viewWithImage.scrollView.contentOffset.x / scrollZoomScale,
-                y: viewWithImage.scrollView.contentOffset.y / scrollZoomScale + viewWithImage.scrollView.contentInset.top / scrollZoomScale,
+                x: (viewWithImage.scrollView.contentOffset.x + viewWithImage.scrollView.contentInset.left) / scrollZoomScale,
+                y: (viewWithImage.scrollView.contentOffset.y + viewWithImage.scrollView.contentInset.top) / scrollZoomScale,
                 width: viewWithImage.croppedRectangleView.frame.width / scrollZoomScale,
                 height: viewWithImage.croppedRectangleView.frame.height / scrollZoomScale
             )

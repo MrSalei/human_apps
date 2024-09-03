@@ -102,61 +102,18 @@ public final class MainViewWithImage: UIView {
         
         layoutElements()
         setupMask()
+        setupRotationGesture()
     }
 }
 
 // MARK: - PUBLIC HELPERS
 extension MainViewWithImage {
     
-    public func applyBlackFilter() {
-        guard let currentImage = defaultImage else {
-            return
-        }
-        
-        let currentCIImage = CIImage(
-            image: currentImage
-        )
-
-        let filter = CIFilter(
-            name: "CIColorMonochrome"
-        )
-        
-        filter?.setValue(
-            currentCIImage,
-            forKey: kCIInputImageKey
-        )
-        
-        filter?.setValue(
-            CIColor(
-                red: 0.0,
-                green: 0.0,
-                blue: 0.0
-            ),
-            forKey: "inputColor"
-        )
-        
-        filter?.setValue(
-            1.0,
-            forKey: "inputIntensity"
-        )
-
-        guard let outputImage = filter?.outputImage else {
-            return
-        }
-        
-        let context = CIContext()
-
-        if let cgimg = context.createCGImage(
-            outputImage,
-            from: outputImage.extent
-        ) {
-            selectedImageView.image = UIImage(
-                cgImage: cgimg
-            )
-        }
+    public func displayDefaultImage() {
+        selectedImageView.image = defaultImage
     }
     
-    public func applyWhiteFilter() {
+    public func applyBlackWhiteFilter() {
         guard let currentImage = defaultImage else {
             return
         }
@@ -166,26 +123,12 @@ extension MainViewWithImage {
         )
 
         let filter = CIFilter(
-            name: "CIColorMonochrome"
+            name: "CIPhotoEffectMono"
         )
         
         filter?.setValue(
             currentCIImage,
             forKey: kCIInputImageKey
-        )
-        
-        filter?.setValue(
-            CIColor(
-                red: 1.0,
-                green: 1.0,
-                blue: 1.0
-            ),
-            forKey: "inputColor"
-        )
-        
-        filter?.setValue(
-            1.0,
-            forKey: "inputIntensity"
         )
 
         guard let outputImage = filter?.outputImage else {
@@ -208,15 +151,24 @@ extension MainViewWithImage {
 // MARK: - SETUP HELPERS
 extension MainViewWithImage {
     
+    private func setupRotationGesture() {
+        let rotationGesture = UIRotationGestureRecognizer(
+            target: self,
+            action: #selector(handleRotate(_:))
+        )
+        
+        selectedImageView.addGestureRecognizer(rotationGesture)
+    }
+    
     private func setupMask() {
         let maskLayer = CAShapeLayer()
         let path = CGMutablePath()
         path.addRect(bounds)
 
-        let cropedRectangleViewFrame = croppedRectangleView.frame
+        let croppedRectangleViewFrame = croppedRectangleView.frame
         
         let rectPath = UIBezierPath(
-            rect: cropedRectangleViewFrame
+            rect: croppedRectangleViewFrame
         )
         
         path.addPath(rectPath.cgPath)
@@ -224,6 +176,22 @@ extension MainViewWithImage {
         maskLayer.path = path
         maskLayer.fillRule = .evenOdd
         blurView.layer.mask = maskLayer
+    }
+}
+
+// MARK: - @OBJC METHODS
+extension MainViewWithImage {
+    
+    @objc func handleRotate(
+        _ gesture: UIRotationGestureRecognizer
+    ) {
+        if gesture.state == .began || gesture.state == .changed {
+            selectedImageView.transform = selectedImageView.transform.rotated(
+                by: gesture.rotation
+            )
+            
+            gesture.rotation = 0
+        }
     }
 }
 
